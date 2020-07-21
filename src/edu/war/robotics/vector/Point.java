@@ -28,6 +28,20 @@ public class Point {
         return Math.sqrt(xSquared + ySquared);
     }
 
+    public Point getPointDelta(Point tragetPoint) {
+        if (tragetPoint == null) {
+            return null;
+        }
+        double deltaX = this.x - tragetPoint.getX();
+        double deltaY = this.y - tragetPoint.getY();
+        return new Point(deltaX, deltaY);
+    }
+
+    public double getDistance(Point targetPoint) {
+        Point deltaPoint = this.getPointDelta(targetPoint);
+        return Math.sqrt(Math.pow(deltaPoint.getX(),2) + Math.pow(deltaPoint.getY(),2));
+    }
+
     public String getQuadrant() {
         String result = null;
 
