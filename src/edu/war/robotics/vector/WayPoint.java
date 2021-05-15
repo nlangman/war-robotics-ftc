@@ -46,7 +46,7 @@ class WayPoint {
      * distance along the path.  The value is computed as the dot product between Vcurrent and
      * Vpath, normalized by the length of vPath
      *
-     * @param current The source point to compare to the WayPoint
+     * @param robotPosition The source point to compare to the WayPoint
      */
     public double componentAlongPath(Point robotPosition) {
         double deltaXFromCurrent = point.getX() - robotPosition.getX();

@@ -28,12 +28,12 @@ public class Point {
         return Math.sqrt(xSquared + ySquared);
     }
 
-    public Point getPointDelta(Point tragetPoint) {
-        if (tragetPoint == null) {
+    public Point getPointDelta(Point targetPoint) {
+        if (targetPoint == null) {
             return null;
         }
-        double deltaX = this.x - tragetPoint.getX();
-        double deltaY = this.y - tragetPoint.getY();
+        double deltaX = this.x - targetPoint.getX();
+        double deltaY = this.y - targetPoint.getY();
         return new Point(deltaX, deltaY);
     }
 
